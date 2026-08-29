@@ -1,0 +1,63 @@
+/* Stand Command — hand-written, no framework, in the product's own spirit. */
+
+:root{
+  --paper:#fbfaf7; --card:#f4f2ec; --ink:#21201d; --mid:#6c675e;
+  --rule:#e3dfd6; --green:#1f8a70; --green-dark:#166a56;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+     font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+a{color:var(--green-dark)}
+a:hover{color:var(--green)}
+
+/* ---- hero ---- */
+.hero{padding:72px 0 40px;border-bottom:1px solid var(--rule);
+      background:
+        linear-gradient(rgba(251,250,247,.92),rgba(251,250,247,.97)),
+        repeating-linear-gradient(0deg,transparent 0 39px,var(--rule) 39px 40px),
+        repeating-linear-gradient(90deg,transparent 0 39px,var(--rule) 39px 40px)}
+.mark{font-family:var(--serif);font-size:15px;letter-spacing:.32em;
+      text-transform:uppercase;color:var(--green-dark);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.4vw,46px);
+         line-height:1.16;letter-spacing:-.01em;margin-bottom:18px}
+.lede{font-size:19px;color:var(--mid);max-width:38em;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border:1.5px solid var(--green-dark);
+     border-radius:3px;text-decoration:none;font-weight:600;font-size:16px;
+     color:var(--green-dark);background:transparent}
+.btn:hover{background:rgba(31,138,112,.07);color:var(--green-dark)}
+.btn.primary{background:var(--green-dark);color:#fff}
+.btn.primary:hover{background:var(--green);color:#fff}
+
+/* ---- screenshot ---- */
+.shot{margin:44px auto 8px}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);
+          border-radius:4px;box-shadow:0 18px 44px -20px rgba(33,32,29,.35)}
+.shot figcaption{font-size:14px;color:var(--mid);margin-top:12px;max-width:44em}
+
+/* ---- sections ---- */
+main section{padding:52px 0 8px}
+h2{font-family:var(--serif);font-weight:600;font-size:29px;margin-bottom:22px;
+   letter-spacing:-.005em}
+h3{font-size:17px;margin-bottom:6px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+.cols p{color:var(--mid);font-size:16px}
+@media (max-width:680px){.cols{grid-template-columns:1fr}}
+
+.band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+      margin-top:48px;padding:44px 0 48px}
+.band p{max-width:46em;font-size:17.5px}
+
+.steps{margin:0 0 14px 22px}
+.steps li{margin-bottom:12px;max-width:44em}
+.aside{font-size:14.5px;color:var(--mid)}
+
+/* ---- footer ---- */
+footer{border-top:1px solid var(--rule);margin-top:64px;padding:36px 0 48px;
+       font-size:15px;color:var(--mid)}
+footer p{margin-bottom:6px}
+.fine{font-size:13px;margin-top:14px}
