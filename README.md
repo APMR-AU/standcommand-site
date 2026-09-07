@@ -16,7 +16,7 @@ CNAME                 custom domain for GitHub Pages
 A browser tool ships its complete source to whoever opens it, so a public demo
 publishes the whole engine, comments and all. The demo build (the fictional
 Port Meridian fair), its example layout and the sample exhibitor sheet are
-therefore sent by email on request — the site's "Request the demo build"
+therefore sent by email on request — the site's "Request the demo"
 mailto — rather than committed to this public repo. They are built in the
 `srbf-planner` repo:
 
@@ -24,7 +24,7 @@ mailto — rather than committed to this public repo. They are built in the
 cd ../srbf-planner && node build.mjs --fair=demo   # -> dist/stand-command-demo.html
 ```
 
-Everything in the demo — the fair, the hall, the dealers, the prices — is
+Everything in the demo — the fair, the hall, the exhibitors, the prices — is
 fictional, and must stay that way: the planner repo's suite asserts no Sydney
 fact leaks into the demo build.
 
