@@ -5,11 +5,19 @@ built for the Sydney Rare Book Fair 2026. Hand-written static HTML, no
 framework, no build step, in the product's own spirit.
 
 ```
-index.html            the landing page
+index.html              the landing page
 styles.css
-assets/hero.jpg       screenshot of the demo build with the example layout
-CNAME                 custom domain for GitHub Pages
+assets/hero.jpg         screenshot of the demo build with the example layout
+assets/logo-source.png  the logo as rendered, on paper — the source, kept whole
+make-logo.sh            derives the three files below from it; needs ImageMagick
+assets/logo.png         the logo band with the paper lifted, for the hero
+assets/icon.png         the SC monogram, square, favicon and touch icon
+assets/share.jpg        the logo band on its paper at 1200x630, for link previews
+CNAME                   custom domain for GitHub Pages
 ```
+
+The three derived images are never hand-edited: change `make-logo.sh` and
+rerun it, as the planner does with its print plan.
 
 ## The demo is deliberately not hosted here
 
