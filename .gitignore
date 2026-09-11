@@ -1,1 +1,3 @@
 .DS_Store
+# The raw screen recording behind make-demo.sh: 94 MB, stays on Nick's Mac.
+*.mov

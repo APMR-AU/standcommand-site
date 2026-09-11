@@ -34,8 +34,9 @@ a:hover{color:var(--green)}
 
 /* ---- screenshot ---- */
 .shot{margin:44px auto 8px}
-.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);
-          border-radius:4px;box-shadow:0 18px 44px -20px rgba(33,32,29,.35)}
+.shot video{display:block;width:100%;height:auto;border:1px solid var(--rule);
+            border-radius:4px;box-shadow:0 18px 44px -20px rgba(33,32,29,.35);
+            cursor:pointer;background:var(--card)}
 .shot figcaption{font-size:14px;color:var(--mid);margin-top:12px;max-width:44em}
 
 /* ---- sections ---- */

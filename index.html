@@ -33,10 +33,24 @@
 </header>
 
 <figure class="shot wrap">
-  <img src="assets/hero.jpg" alt="Stand Command with a fair laid out: colour-coded stands over a calibrated venue floor plan, exhibitor names and furniture drawn in place, aisle widths measured, and running totals of stands, units, floor density and payments in the sidebar." width="1800" height="1281">
-  <figcaption>The demonstration fair: the Port Meridian Antiquarian Book Fair</figcaption>
+  <video class="demo" autoplay muted loop playsinline poster="assets/demo-poster.jpg" width="1920" height="1052"
+    aria-label="Stand Command in use on the demonstration fair: a stand reshaped, aisle widths measured, furniture placed in the fitout view, the Stand Sheet as the exhibitor sees it, the exhibitor record, and the plan zoomed in.">
+    <source src="assets/demo.mp4" type="video/mp4">
+  </video>
+  <figcaption>The demonstration fair: the Port Meridian Antiquarian Book Fair. Click the film to pause it.</figcaption>
 </figure>
-<!-- video slot: a short screen recording of the demo goes here when one exists -->
+<script>
+  // The loop is silent and there is nothing to install, so it plays on its own;
+  // a click pauses it, and a visitor who has asked for reduced motion gets the
+  // poster and a play control instead.
+  (function(){
+    var v=document.querySelector('video.demo');
+    v.addEventListener('click',function(){ v.paused ? v.play() : v.pause(); });
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+      v.removeAttribute('autoplay'); v.pause(); v.controls=true;
+    }
+  })();
+</script>
 
 
 <main class="wrap">

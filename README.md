@@ -7,17 +7,21 @@ framework, no build step, in the product's own spirit.
 ```
 index.html              the landing page
 styles.css
-assets/hero.jpg         screenshot of the demo build with the example layout
 assets/logo-source.png  the logo as rendered, on paper — the source, kept whole
 make-logo.sh            derives the three files below from it; needs ImageMagick
 assets/logo.png         the logo band with the paper lifted, for the hero
 assets/icon.png         the SC monogram, square, favicon and touch icon
 assets/share.jpg        the logo band on its paper at 1200x630, for link previews
+make-demo.sh            cuts the two files below from the raw recording; needs ffmpeg
+assets/demo.mp4         the 39-second silent loop of the tool in use, on the page
+assets/demo-poster.jpg  its first frame, shown before it plays
 CNAME                   custom domain for GitHub Pages
 ```
 
-The three derived images are never hand-edited: change `make-logo.sh` and
-rerun it, as the planner does with its print plan.
+The derived images and the clip are never hand-edited: change the script and
+rerun it, as the planner does with its print plan. The raw screen recording the
+clip is cut from, `assets/demo-video.mov`, is gitignored — 94 MB, on Nick's Mac
+only — so `make-demo.sh` runs there and nowhere else.
 
 ## The demo is deliberately not hosted here
 
